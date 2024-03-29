@@ -3,7 +3,7 @@ const CategoriaController = require('../controllers/CategoriaController.js');
 
 const router = Router();
 
-const categoriaController = new PessoaController();
+const categoriaController = new CategoriaController();
 
 router.get('/categorias', (req, res) => categoriaController.pegaTodos(req, res));
 router.get('/categorias/:id', (req, res) => categoriaController.pegaUmPorId(req, res));
