@@ -1,6 +1,6 @@
 const dataSource = require("../models");
 
-class Services{
+class Service{
     constructor(nomeDoModel){
         this.model = nomeDoModel;
     }
@@ -10,4 +10,4 @@ class Services{
     }
 }
 
-module.exports = Services;
+module.exports = Service;
