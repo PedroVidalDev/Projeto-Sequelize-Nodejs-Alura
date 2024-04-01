@@ -33,11 +33,12 @@ class Service{
         return dataSource[this.model].destroy({where: {id: id}});
     }
 
-    async atualizaRegistro(dadosAtualizados, where){
+    async atualizaRegistro(dadosAtualizados, where, transacao = {}){
         const listaDeRegistroAtualizado = dataSource[this.model].update(dadosAtualizados, {
             where: {
                 ...where
-            }
+            },
+            transaction: transacao
         });
 
         if(listaDeRegistroAtualizado[0] == 0){
